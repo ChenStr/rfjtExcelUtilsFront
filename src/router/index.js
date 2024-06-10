@@ -19,11 +19,18 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
     }
-  }
+  },
+  {
+    path: '/rfjt',
+    name: 'test',
+    component: function () {
+      return import('../views/rfjt/Test.vue')
+    }
+  },
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })
